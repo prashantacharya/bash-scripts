@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -n $1 ] 
+then
+  git push origin $1
+else
+  current_branch=$(git branch --show-current)
+  git push origin $current_branch
+fi
